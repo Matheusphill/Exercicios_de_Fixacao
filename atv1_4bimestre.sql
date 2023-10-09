@@ -64,3 +64,8 @@ SELECT DATEDIFF('2023-10-14', '2023-10-09') AS dias_de_diferença;
 
 --D
 SELECT data_eventos, DAYNAME(data_eventos) AS nome_do_dia_semana FROM EVENTOS;
+
+
+--4
+--A
+SELECT produto, quantidade, IF(quantidade > 0, 'Em estoque', 'Fora de estoque') AS estoque FROM PRODUTOS;
