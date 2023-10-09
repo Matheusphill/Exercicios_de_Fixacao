@@ -25,6 +25,7 @@ SELECT CONCAT('Sr-', nome) from NOMES WHERE NOME LIKE '%O'
 union 
 SELECT CONCAT('Sra-', nome) from NOMES WHERE NOME LIKE '%A';
 
+
 --2
 --A
 CREATE TABLE PRODUTOS (
@@ -42,3 +43,16 @@ SELECT ABS(quantidade) AS valor_ABS_quant FROM PRODUTOS;
 
 --D
 SELECT AVG(preco) AS media FROM PRODUTOS;
+
+
+--3
+--A
+CREATE TABLE EVENTOS (
+    data_eventos DATE
+);
+
+INSERT INTO EVENTOS (data_eventos) VALUES
+('2023-10-09'),
+('2023-10-10'),
+('2023-10-14');
+
