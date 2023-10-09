@@ -36,3 +36,6 @@ INSERT INTO PRODUTOS (produto, preco, quantidade)
 
 --B
 VALUES ('Televisão', ROUND(10.4567, 2), 5);
+
+--C
+SELECT ABS(quantidade) AS valor_ABS_quant FROM PRODUTOS;
