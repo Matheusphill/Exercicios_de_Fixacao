@@ -56,3 +56,5 @@ INSERT INTO EVENTOS (data_eventos) VALUES
 ('2023-10-10'),
 ('2023-10-14');
 
+--B
+INSERT INTO EVENTOS (data_eventos) VALUES (NOW());
