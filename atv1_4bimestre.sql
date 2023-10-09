@@ -1,0 +1,17 @@
+--1 
+--A
+CREATE DATABASE ATV1;
+use ATV1;
+
+CREATE TABLE NOMES(
+NOME VARCHAR(100) NOT NULL
+);
+
+INSERT INTO NOMES(NOME) VALUES
+('Roberta'),
+('Roberto'),
+('Maria Clara'),
+('João');
+SELECT * FROM NOMES;
+
+--B
