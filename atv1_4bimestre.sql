@@ -58,3 +58,6 @@ INSERT INTO EVENTOS (data_eventos) VALUES
 
 --B
 INSERT INTO EVENTOS (data_eventos) VALUES (NOW());
+
+--C
+SELECT DATEDIFF('2023-10-14', '2023-10-09') AS dias_de_diferença;
