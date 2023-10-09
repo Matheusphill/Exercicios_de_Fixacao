@@ -24,3 +24,13 @@ SELECT LENGTH(NOME) AS TAMANHO_NOME FROM nomes;
 SELECT CONCAT('Sr-', nome) from NOMES WHERE NOME LIKE '%O' 
 union 
 SELECT CONCAT('Sra-', nome) from NOMES WHERE NOME LIKE '%A';
+
+--2
+--A
+CREATE TABLE PRODUTOS (
+    produto VARCHAR(255),
+    preco DECIMAL(10, 2),
+    quantidade INT
+);
+INSERT INTO PRODUTOS (produto, preco, quantidade)
+VALUES ('Televisão', ROUND(10.4567, 2), 5);
