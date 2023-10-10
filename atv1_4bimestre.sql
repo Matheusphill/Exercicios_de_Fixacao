@@ -96,3 +96,6 @@ SELECT COUNT(*) AS nub_total FROM produtos;
 
 --B
 SELECT produto, MAX(preco) AS produto_mais_caro FROM PRODUTOS;
+
+--C
+SELECT produto, MIN(preco) AS produto_mais_barato FROM PRODUTOS;
