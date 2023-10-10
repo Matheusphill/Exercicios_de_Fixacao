@@ -142,3 +142,21 @@ END;
 //
 DELIMITER ;
 SELECT calcular_exponencial(2, 3) AS Valor_exponencial;
+
+--C
+DELIMITER //
+CREATE FUNCTION verificar_palindromo(palavra VARCHAR(255))
+RETURNS INT
+BEGIN
+    DECLARE reverso VARCHAR(255);
+    SET reverso = REVERSE(palavra);
+    
+    IF palavra = reverso THEN
+        RETURN 1;
+    ELSE
+        RETURN 0;
+    END IF;
+END;
+//
+DELIMITER ;
+SELECT verificar_palindromo('radar') AS resultado;
