@@ -85,3 +85,6 @@ BEGIN
     RETURN total;
 END //
 DELIMITER ;
+
+--B
+SELECT produto, preco, quantidade, valor_total (preco, quantidade) AS valor FROM PRODUTOS;
