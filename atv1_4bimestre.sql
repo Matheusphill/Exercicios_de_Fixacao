@@ -99,3 +99,6 @@ SELECT produto, MAX(preco) AS produto_mais_caro FROM PRODUTOS;
 
 --C
 SELECT produto, MIN(preco) AS produto_mais_barato FROM PRODUTOS;
+
+--D
+SELECT SUM(IF(quantidade > 0, preco, 0)) AS soma_total FROM PRODUTOS;
