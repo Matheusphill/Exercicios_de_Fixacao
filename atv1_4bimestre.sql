@@ -102,3 +102,24 @@ SELECT produto, MIN(preco) AS produto_mais_barato FROM PRODUTOS;
 
 --D
 SELECT SUM(IF(quantidade > 0, preco, 0)) AS soma_total FROM PRODUTOS;
+
+
+--7
+--A
+DELIMITER //
+CREATE FUNCTION calcular_fatorial(n INT)
+RETURNS INT
+BEGIN
+    DECLARE resultado INT;
+    SET resultado = 1;
+    
+    WHILE n > 0 DO
+        SET resultado = resultado * n;
+        SET n = n - 1;
+    END WHILE;
+
+    RETURN resultado;
+END;
+//
+DELIMITER ;
+SELECT calcular_fatorial(5) AS valor_fatorial;
