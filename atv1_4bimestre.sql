@@ -72,3 +72,16 @@ SELECT produto, quantidade, IF(quantidade > 0, 'Em estoque', 'Fora de estoque') 
 
 --B
 SELECT produto, preco, CASE when preco < 50 THEN 'Barato' when preco >= 50 AND preco < 100 THEN 'Médio' when preco >= 100 THEN 'Caro' END AS preço_categoria FROM PRODUTOS;
+
+
+--5
+--A
+DELIMITER //
+CREATE FUNCTION valor_total (preco DECIMAL(10, 2), quantidade INT)
+RETURNS DECIMAL(10, 2)
+BEGIN
+    DECLARE total DECIMAL(10, 2);
+    SET total = preco * quantidade;
+    RETURN total;
+END //
+DELIMITER ;
