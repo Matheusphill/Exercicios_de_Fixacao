@@ -93,3 +93,6 @@ SELECT produto, preco, quantidade, valor_total (preco, quantidade) AS valor FROM
 --6
 --A
 SELECT COUNT(*) AS nub_total FROM produtos;
+
+--B
+SELECT produto, MAX(preco) AS produto_mais_caro FROM PRODUTOS;
