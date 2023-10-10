@@ -88,3 +88,8 @@ DELIMITER ;
 
 --B
 SELECT produto, preco, quantidade, valor_total (preco, quantidade) AS valor FROM PRODUTOS;
+
+
+--6
+--A
+SELECT COUNT(*) AS nub_total FROM produtos;
