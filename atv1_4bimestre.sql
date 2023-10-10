@@ -123,3 +123,22 @@ END;
 //
 DELIMITER ;
 SELECT calcular_fatorial(5) AS valor_fatorial;
+
+--B
+DELIMITER //
+CREATE FUNCTION calcular_exponencial(base INT, expoente INT)
+RETURNS INT
+BEGIN
+    DECLARE resultado INT;
+    SET resultado = 1;
+    
+    WHILE expoente > 0 DO
+        SET resultado = resultado * base;
+        SET expoente = expoente - 1;
+    END WHILE;
+
+    RETURN resultado;
+END;
+//
+DELIMITER ;
+SELECT calcular_exponencial(2, 3) AS Valor_exponencial;
